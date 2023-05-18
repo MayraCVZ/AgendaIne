@@ -1,3 +1,6 @@
+use citas_ine
+go
+
 CREATE PROCEDURE SP_CREARCITAS    -- SOLO PARA CREAR PROCEDURE
 
 --ALTER PROCEDURE SP_CREARCITAS  -- ALTER es para hacer cambios en el código del Procedure, si se usa Create marca error porque ya está creado
@@ -56,7 +59,7 @@ AS
 				end   -- fin del IF
 
 /*
-select * from citas where fecha='2023-05-04' order by hora
+select * from citas where fecha='2023-05-18' order by hora
 
-EXEC SP_CREARCITAS 160551,'2023-05-09'			-- marca línea roja porque el Query quiere ejecutar todo el código comentado
+EXEC SP_CREARCITAS 160551,'2023-05-18'			-- marca línea roja porque el Query quiere ejecutar todo el código comentado
 */

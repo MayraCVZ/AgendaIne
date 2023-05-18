@@ -1,3 +1,6 @@
+use citas_ine
+go
+
 CREATE PROCEDURE SP_CREARCITAS_TODOSMODULOS
 
 --ALTER PROCEDURE SP_CREARCITAS_TODOSMODULOS
@@ -32,7 +35,7 @@ DEALLOCATE ProdInfo     -- desalojar el Cursor
 
 GO
 /*
-EXEC SP_crearCitas_todosModulos '2023-05-09'
+EXEC SP_crearCitas_todosModulos '2023-05-18'
 
-SELECT * from citas where fecha='2023-05-08'
+SELECT * from citas where fecha='2023-05-18'
 */

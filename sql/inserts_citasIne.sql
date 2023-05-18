@@ -36,6 +36,7 @@ insert into estados values (31,'Yucatán')
 insert into estados values (32,'Zacatecas')
 
 /**************************municipio**************************/
+-----------AGUASCALIENTES
 insert into municipio values (1,1,'AGUASCALIENTES')
 insert into municipio values (1,2,'CALVILLO')
 insert into municipio values (1,3,'JESUS MARIA')
@@ -43,6 +44,7 @@ insert into municipio values (3,4,'COMONDU')
 insert into municipio values (3,5,'LA PAZ')
 insert into municipio values (3,6,'LOS CABOS')
 insert into municipio values (3,7,'PABELLON DE ARTEAGA')
+-----------MICHOACAN
 insert into municipio values (16,8,'APATZINGAN DE LA CONSTITUCION')
 insert into municipio values (16,9,'HIDALGO') 
 insert into municipio values (16,10,'JACONA DE PLANCARTE')
@@ -59,10 +61,24 @@ insert into municipio values (16,20,'ZACAPU')
 insert into municipio values (16,21,'URUAPAN')
 insert into municipio values (16,22,'ZAMORA DE HIDALGO')
 insert into municipio values (16,23,'ZITACUARO')
-insert into municipio values (6,24,'Colima')
-insert into municipio values (6,25,'Villa de Alvarez')
-insert into municipio values (6,26,'Manzanillo')
-insert into municipio values (6,27,'Tecoman')
+-----------COLIMA
+insert into municipio values (9,24,'Colima')
+insert into municipio values (9,25,'Villa de Alvarez')
+insert into municipio values (9,26,'Manzanillo')
+insert into municipio values (9,27,'Tecoman')
+-----------NAYARIT
+select * from modulo
+insert into municipio values (18,28,'BAHIA DE BANDERAS')
+insert into municipio values (18,29,'COMPOSTELA')
+insert into municipio values (18,30,'SANTIAGO IXCUINTLA')
+insert into municipio values (18,31,'TEPIC')
+-----------------YUCATAN
+select * from modulo
+insert into municipio values (31,32,'MERIDA')
+insert into municipio values (31,33,'PROGRESO')
+insert into municipio values (31,34,'TICUL')
+insert into municipio values (31,35,'TIZIMIN')
+insert into municipio values (31,36,'VALLADOLID')
 
 /**************************modulo**************************/
 insert into modulo values (10251,(select id_municipio from municipio where nombre='AGUASCALIENTES'),'EX EJIDO OJOCALIENTE CENTRO COMERCIAL ESPACIO AGUASCALIENTES','AVENIDA TECNOLÓGICO NO. 120, COL. EX EJIDO OJOCALIENTE CENTRO COMERCIAL ESPACIO AGUASCALIENTES, C.P. 20196, LOC. AGUASCALIENTES, AGUASCALIENTES, AGUASCALIENTES','ENTRE CALLE TECNOLÓGICO Y AVENIDA AGUASCALIENTES ORIENTE FRENTE AL TECNOLÓGICO NACIONAL DE MÉXICO','08:00','20:00')
@@ -236,6 +252,111 @@ insert into modulo values(160351,
 '08:00',
 '15:00')
 
+-----------NAYARIT
+insert into modulo values(180352,
+(select id_municipio from municipio where nombre='BAHIA DE BANDERAS'),
+'PLAZA SANTO TORIBIO COLONIA CENTRO',
+'YUCATÁN NO. 80-G, COL. PLAZA SANTO TORIBIO COLONIA CENTRO, C.P. 63737, LOC. SAN JOSÉ DEL VALLE, BAHIA DE BANDERAS, NAYARIT',
+'ENTRE ZARAGOZA Y JUAN ESCUTIA',
+'08:00',
+'20:00')
+
+insert into modulo values(180351 ,
+(select id_municipio from municipio where nombre='COMPOSTELA'),
+'EL MOLINO',
+'CARRETERA TEPIC PUERTO VALLARTA NO. 11, COL. EL MOLINO, C.P. 63705, LOC. COMPOSTELA, COMPOSTELA, NAYARIT',
+'ENTRE GILBERTO FLORES MUÑOZ Y PRIVADA RIVAS Y MARTÍNEZ',
+'08:00',
+'15:00')
+
+insert into modulo values(180151,
+(select id_municipio from municipio where nombre='SANTIAGO IXCUINTLA'),
+'NUEVO MÉXICO',
+'AYUNTAMIENTO NO. S/N, COL. NUEVO MÉXICO, C.P. 63440, LOC. SANTIAGO IXCUINTLA, SANTIAGO IXCUINTLA, NAYARIT',
+'ENTRE GUILLERMO PRIETO Y CONSTITUCIÓN A ESPALDAS DE LA OFICINA TÉCNICA DE TELMEX',
+'08:00',
+'15:00')
+
+insert into modulo values(180251,
+(select id_municipio from municipio where nombre='TEPIC'),
+'ZONA CENTRO PLAZA COMERCIAL HOMINIS',
+'AVENIDA MÉXICO NORTE 300 INTERIOR 8 NO. S/N, COL. ZONA CENTRO PLAZA COMERCIAL HOMINIS, C.P. 63000, LOC. TEPIC, TEPIC, NAYARIT',
+'ENTRE IGNACIO ZARAGOZA Y AMADO NERVO',
+'08:00',
+'20:00')
+
+insert into modulo values(180252,
+(select id_municipio from municipio where nombre='TEPIC'),
+'EL PUENTE QUEBRADO PLAZA COMERCIAL UBIKA',
+'BOULEVARD LUIS DONALDO COLOSIO NO. 680 INT. L 4 Y 5, COL. EL PUENTE QUEBRADO PLAZA COMERCIAL UBIKA, C.P. 63175, LOC. TEPIC, TEPIC, NAYARIT',
+'ESQUINA BOULEVARD GOBERNADORES A UN COSTADO DE PLAZA FORUM',
+'08:00',
+'20:00')
+
+-----------------YUCATAN
+insert into modulo values(310351,
+(select id_municipio from municipio where nombre='MERIDA'),
+'MIGUEL HIDALGO CENTRO COMERCIAL',
+'CALLE 50 LOCALES 84 Y 85 NO. 143 INT. L 84 Y 85, COL. MIGUEL HIDALGO CENTRO COMERCIAL PLAZA DORADA, C.P. 97229, LOC. MERIDA, MERIDA, YUCATAN',
+'CENTRO COMERCIAL PLAZA DORADA ACCESO POR PUERTA 2 ENTRE CALLES 15 Y 19',
+'08:00',
+'20:00')
+
+insert into modulo values(310352,
+(select id_municipio from municipio where nombre='MERIDA'),
+'MULSAY SUSULÁ XOCLÁN',
+'CALLE 65 A AVENIDA JUAN PABLO II NO. 180 INT. L 3 AL 9, COL. MULSAY SUSULÁ XOCLÁN, C.P. 97249, LOC. MÉRIDA, MERIDA, YUCATAN',
+'ESQUINA CALLE 128 FRENTE AL CEMENTERIO XOCLÁN',
+'08:00',
+'15:00')
+
+insert into modulo values(310354,
+(select id_municipio from municipio where nombre='MERIDA'),
+'CENTRO',
+'CALLE 54 NO. S/N INT. L 7 Y 8, COL. CENTRO, C.P. 97000, LOC. MERIDA, MERIDA, YUCATAN',
+'A 50 MTS DEL MERCADO SAN BENITO ENTRE CALLE 69 Y CALLE 71',
+'08:00',
+'15:00')
+
+insert into modulo values(310451,
+(select id_municipio from municipio where nombre='MERIDA'),
+'MEXICO ORIENTE',
+'AVENIDA JOSÉ DÍAZ BOLIO NO. 54-B, COL. MEXICO ORIENTE, C.P. 97125, LOC. MERIDA, MERIDA, YUCATAN',
+'ENTRE CALLE 8 Y CALLE 10 A MEDIA CUADRA DE BOMBEROS NORTE',
+'08:00',
+'20:00')
+
+insert into modulo values(310251,
+(select id_municipio from municipio where nombre='PROGRESO'),
+'CENTRO',
+'CALLE 70 NO. 125, COL. CENTRO, C.P. 97320, LOC. PROGRESO, PROGRESO, YUCATAN',
+'A MEDIA CUADRA DE GRUPO NAVIERO MULTISUR Y A UNA CUADRA DE ASOCIACIÓN DE AGENTES ADAUANALES',
+'08:00',
+'15:00')
+
+insert into modulo values(310551,
+(select id_municipio from municipio where nombre='TICUL'),
+'CENTRO',
+'CALLE 27 NO. 205 INT. 1, COL. CENTRO, C.P. 97860, LOC. TICUL, TICUL, YUCATAN',
+'ENTRE LAS 28 Y 30 A DOS CUADRAS DEL CENTRO DE SALUD',
+'08:00',
+'15:00')
+
+insert into modulo values(310152,
+(select id_municipio from municipio where nombre='TIZIMIN'),
+'CENTRO',
+'CALLE 48 ENTRE 55 Y 57 NO. 417, COL. CENTRO, C.P. 97760, LOC. TIZIMIN, TIZIMIN, YUCATAN',
+'ENTRE CALLE 55 Y 57 , A UN LADO DEL HOTEL EL HERRADERO, FRENTE A LA TALABARTERIA RODRIGUEZ.',
+'08:00',
+'15:00')
+
+insert into modulo values(310151,
+(select id_municipio from municipio where nombre='VALLADOLID'),
+'BARRIO SANTA LUCIA',
+'CALLE 23 ENTRE 40 Y 42 NO. S/N, COL. BARRIO SANTA LUCIA, C.P. 97782, LOC. VALLADOLID, VALLADOLID, YUCATAN',
+'PLAZA BELLA LOCALES C01 Y C02',
+'08:00',
+'15:00')
 
 /**************************paises**************************/
 insert into paises values (1,'Angola')

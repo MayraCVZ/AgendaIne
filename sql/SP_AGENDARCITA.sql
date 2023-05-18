@@ -1,3 +1,6 @@
+use citas_ine
+go
+
 CREATE PROCEDURE SP_AGENDARCITA  
 --ALTER PROCEDURE SP_AGENDARCITA  
 	@folio int,
