@@ -12,3 +12,9 @@ begin
 	update citas set estado='Disponible' where @folio=folio
 end
 GO  
+
+/*
+select * FROM detalle_cita;
+select * from citas where estado <>'Disponible';
+delete from detalle_cita where folio=1;
+*/
