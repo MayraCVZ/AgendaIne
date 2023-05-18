@@ -16,10 +16,10 @@ public class Conexion {
     public static Connection conexion()
     {
         String connectionUrl
-                = "jdbc:sqlserver://CARLOS:1433;"
-                + "database=citas_ine;"
-                + "user=JOSA;"
-                + "password=1234567890;"
+                = "jdbc:sqlserver://;"/*nombre del servidor*/
+                + "database=;citas_ine"/*nombre de la base de datos*/
+                + "user=;"/*usuario*/
+                + "password=;"/*password*/
                 + "encrypt=true;"
                 + "trustServerCertificate=TRUE;"
                 + "loginTimeout=30;";
